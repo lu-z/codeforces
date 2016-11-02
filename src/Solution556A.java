@@ -25,8 +25,10 @@ public class Solution556A {
 
     public static void main(String args[]) throws Exception {
         final Scanner scanner = new Scanner(System.in);
+
         final int strLen = scanner.nextInt();
         final String binary = scanner.next();
+
         System.out.println(removePairs(strLen, binary));
     }
 }

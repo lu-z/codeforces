@@ -15,6 +15,7 @@ public class Solution705A {
 
     private static String getHulkSentiment(int sentiment) {
         final StringBuilder sb = new StringBuilder();
+
         for (int layer = 0; layer < sentiment; layer++) {
             sb.append(sentimentMap.get(layer % 2));
             if (layer == sentiment - 1) {
@@ -23,11 +24,13 @@ public class Solution705A {
                 sb.append(" that ");
             }
         }
+
         return sb.toString();
     }
 
     public static void main(String[] args) throws Exception {
         final Scanner scanner = new Scanner(System.in);
+
         System.out.println(getHulkSentiment(scanner.nextInt()));
     }
 }

@@ -7,12 +7,15 @@ public class Solution519B {
 
     private static int getDisappearingError(int[] before, int[] after) {
         int result = 0;
+
         for (int error : before) {
             result ^= error;
         }
+
         for (int error : after) {
             result ^= error;
         }
+
         return result;
     }
 
@@ -32,6 +35,7 @@ public class Solution519B {
         for (int error = 0; error < count-2; error++) {
             errorsEnd[error] = scanner.nextInt();
         }
+
         System.out.println(getDisappearingError(errorsStart, errorsIntermediate));
         System.out.println(getDisappearingError(errorsIntermediate, errorsEnd));
     }
